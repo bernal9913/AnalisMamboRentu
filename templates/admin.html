@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro de IDOT</title>
+</head>
+<body>
+
+  <h2>Registro de IDOT</h2>
+  <form method="POST" action="/agregar_reporte">
+    <label for="fecha_inspeccion">Fecha Inspección:</label>
+    <input type="date" name="fecha_inspeccion" id="fecha_inspeccion"required><br>
+
+    <label for="fecha_ingreso">Fecha Ingreso:</label>
+    <input type="date" name="fecha_ingreso" id="fecha_ingreso"required><br>
+
+    <label for="fecha_cot">Fecha Cotización:</label>
+    <input type="date" name="fecha_cot" id = "fecha_cot" required><br>
+
+    <label for="fecha_salida">Fecha Salida:</label>
+    <input type="date" name="fecha_salida" id="fecha_salida" required><br>
+
+    <label for="UsuarioCreador">Usuario Creador:</label>
+    <input type="text" name="UsuarioCreador" id="UsuarioCreador" value = "{{ username }}" readonly="readonly" required><br>
+
+    <label for="Planta">Planta:</label>
+    <input type="text" name="Planta" id="Planta" required><br>
+
+    <label for="Cliente">Cliente:</label>
+    <input type="text" name="Cliente" id ="Cliente" required><br>
+
+    <label for="Serie">Serie:</label>
+    <input type="text" name="Serie" id="Serie" required><br>
+
+    <label for="Marca">Marca:</label>
+    <input type="text" name="Marca" id="Marca" required><br>
+
+    <label for="Medida">Medida:</label>
+    <input type="text" name="Medida" id="Medida" required><br>
+
+    <label for="Modelo">Modelo:</label>
+    <input type="text" name="Modelo" id="Modelo" required><br>
+
+    <label for="TipoCompuesto">Tipo Compuesto:</label>
+    <input type="text" name="TipoCompuesto" id="TipoCompuesto" required><br>
+
+    <label for="GRemanente">Goma Remanente:</label>
+    <input type="text" name="GRemanente" id="GRemanente" required><br>
+
+    <label for="MaquinaTrabajo">Máquina de Trabajo:</label>
+    <input type="text" name="MaquinaTrabajo" id="MaquinaTrabajo" required><br>
+    <input type="text" name="iduser" value="{ idu }" hidden>
+    <input type="submit" value="Guardar">
+  </form>
+</body>
+</html>
+
+</div>
+</body>
+</html>

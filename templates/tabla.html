@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Datos</title>
+    <style>
+table {
+            font-family: arial, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+                nav {
+            background-color: red;
+            text-align: right;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        nav a:hover {
+            color: red;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+      <header>
+        <h1>
+          Tabla de OT's
+        </h1>
+      </header>
+      <nav>
+        <a href="admin.html">Registrar OT</a>
+      </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha Inspección</th>
+                <th>Fecha Ingreso</th>
+                <th>Fecha Cotización</th>
+                <th>Fecha Salida</th>
+                <th>Usuario Creador</th>
+                <th>Planta</th>
+                <th>Cliente</th>
+                <th>Serie</th>
+                <th>Marca</th>
+                <th>Medida</th>
+                <th>Modelo</th>
+                <th>Tipo de Compuesto</th>
+                <th>Goma Remanente</th>
+                <th>Máquina de Trabajo</th>
+                <th>Acciones</th>
+                <!-- Agregar más encabezados de columna según las columnas de tu consulta -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in result %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+                <td>{{ row[8] }}</td>
+                <td>{{ row[9] }}</td>
+                <td>{{ row[10] }}</td>
+                <td>{{ row[11] }}</td>
+                <td>{{ row[12] }}</td>
+                <td>{{ row[13] }}</td>
+                <td>{{ row[14] }}</td>
+                <td>
+                    <form action="{{ url_for('eliminar', id=row[0]) }}" method="post">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>
+                <!-- Agregar más columnas según las columnas de tu consulta -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
