@@ -6,9 +6,9 @@ host = 'bernalgas.mysql.pythonanywhere-services.com'
 usdb = 'bernalgas'
 psdb =  'Bernal9913'
 app.config['MYSQL_DB'] = db
-app.config['MYSQL_HOST'] = host
-app.config['MYSQL_USER'] = usdb
-app.config['MYSQL_PASSWORD'] = psdb
+app.config['MYSQL_HOST'] = "localhost"
+app.config['MYSQL_USER'] = "root"
+app.config['MYSQL_PASSWORD'] = ""
 mysql = MySQL(app)
 
 
