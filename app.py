@@ -2,9 +2,9 @@ from flask import Flask, render_template, jsonify, request, redirect, url_for, s
 from flask_mysqldb import MySQL
 app = Flask(__name__)
 db = 'sistemaregistro'
-host = 'bernalgas.mysql.pythonanywhere-services.com'
-usdb = 'bernalgas'
-psdb =  'Bernal9913'
+host = 'localhost'
+usdb = 'root'
+psdb =  ''
 app.config['MYSQL_DB'] = db
 app.config['MYSQL_HOST'] = "localhost"
 app.config['MYSQL_USER'] = "root"
