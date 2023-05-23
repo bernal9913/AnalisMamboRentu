@@ -90,7 +90,7 @@ def aggreporte():
         cursor.close()
         return redirect(url_for("table"))
 
-@app.route("/teibol")
+@app.route("/tabla")
 def table():
     # Realizar la consulta SQL
     cursor = mysql.connection.cursor()
