@@ -44,7 +44,8 @@ def index():
 
             return render_template('admin.html', idu = idu, username = use, ape = nom, nomape = nomape)
         elif imon[1] == ("cliente"):
-            return render_template("colab.html")
+            #return render_template("colab.html")
+            return redirect(url_for("table"))
 
 @app.route('/admin', methods=["GET", "POST"])
 def admin():
